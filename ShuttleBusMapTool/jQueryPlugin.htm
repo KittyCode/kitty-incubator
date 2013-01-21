@@ -4,7 +4,10 @@
     <title></title>
     <script src="Scripts/jquery-1.8.3.js" type="text/javascript"></script>
     <script src="Scripts/jquery.shuttleBusMapTool.js" type="text/javascript"></script>
+    <script src="http://api.map.baidu.com/api?v=1.4" type="text/javascript"></script>
     <link href="Styles/jquery.shuttleBusMapTool.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <script src="Scripts/bootstrap.min.js" type="text/javascript"></script>
 
     <script type="text/javascript">
 
@@ -13,11 +16,14 @@
             //$(".text").hoverElement().css('color', 'red');
             // add namespace here for test
             $(".text").shuttleBusMapTool('hoverElement');
+            $(".text").shuttleBusMapTool('MapLoading');
         });
 
     </script>
 </head>
 <body>
+
+
     <span class="text"> 
     First line. 
     </span> 
@@ -29,6 +35,6 @@
     <span class="text"> 
     Third line..
     </span> 
-
+<div id="map" style="width:500px;height:320px"></div>
 </body>
 </html>

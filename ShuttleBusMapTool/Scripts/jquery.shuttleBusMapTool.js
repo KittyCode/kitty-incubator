@@ -7,7 +7,6 @@
     //----------- This is only a demo for jQuery plugin --------------//
 
 
-
     var methods={
 
         init: function () {
@@ -29,6 +28,17 @@
             return this.each(function () {
                 max=Math.max(max,$(this).height());
             });
+        },
+
+        MapLoading:function () {
+            function initialize() {
+             var mp=new BMap.Map('map');
+             mp.centerAndZoom(new BMap.Point(121.491, 31.233), 11);
+            }
+            var func_init=initialize();
+             document.createElement("script");
+             script.src="http://api.map.baidu.com/api?v=1.4&callback=func_init";
+             return document.body.appendChild(script);
         }
 
 
@@ -73,11 +83,8 @@ $.fn.shuttleBusMapTool=function (method) {
 
     };
 
-
     //----------------- Shuttle Bus Map Tool -------------------//
-
     // Coming Soon...
-
 })(jQuery); 
 
 
